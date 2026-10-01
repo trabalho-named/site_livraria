@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastrar livro – Capítulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-cadastro">
+
+<section class="cadastro-tela">
+  <div class="cadastro-cartao">
+    <div class="cadastro-icone" aria-hidden="true">📖</div>
+    <h1 id="titulo-pagina">Adicionar livro</h1>
+    <p class="cadastro-subtitulo">Cadastre um novo livro na sua biblioteca.</p>
+
+    <form id="form-livro" novalidate>
+      <input type="hidden" id="livro-id" value="">
+
+      <label>Título
+        <input type="text" id="titulo" placeholder="Ex.: O Hobbit">
+      </label>
+      <small class="erro" id="erro-titulo"></small>
+
+      <label>Autor
+        <input type="text" id="autor" placeholder="Ex.: J.R.R. Tolkien">
+      </label>
+      <small class="erro" id="erro-autor"></small>
+
+      <label>Categoria
+        <select id="categoria">
+          <option value="">Selecione</option>
+          <option>Ficção</option>
+          <option>Romance</option>
+          <option>Fantasia</option>
+          <option>Mistério</option>
+          <option>Desenvolvimento pessoal</option>
+          <option>Clássicos</option>
+        </select>
+      </label>
+      <small class="erro" id="erro-categoria"></small>
+
+      <label>Ano de publicação
+        <input type="number" id="ano" placeholder="Ex.: 1937">
+      </label>
+      <small class="erro" id="erro-ano"></small>
+
+      <label>Descrição <span class="opcional">(opcional)</span>
+        <textarea id="descricao" rows="3" placeholder="Uma frase sobre o livro..."></textarea>
+      </label>
+
+      <button type="submit" id="btn-cadastrar" class="btn-cadastro">Cadastrar livro</button>
+    </form>
+
+    <a href="index.html" class="cadastro-voltar">← Voltar para a biblioteca</a>
+  </div>
+</section>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
